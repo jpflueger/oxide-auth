@@ -1,0 +1,15 @@
+spin_manifest_version = "1"
+authors = ["Justin Pflueger <justin.pflueger@fermyon.com>"]
+description = "Example spin component with oxide-auth-spin integration"
+name = "spin-example"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "spin-example"
+source = "target/wasm32-wasi/release/spin_example.wasm"
+allowed_http_hosts = []
+[component.trigger]
+route = "/..."
+[component.build]
+command = "cargo build --target wasm32-wasi --target-dir ./target --release"

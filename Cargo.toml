@@ -11,4 +11,6 @@ members = [
 	"oxide-auth-rouille",
 	"oxide-auth-db",
 	"oxide-auth-db/examples/db-example",
+	"oxide-auth-spin",
+	"oxide-auth-spin/examples/spin-example"
 ]
