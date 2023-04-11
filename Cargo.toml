@@ -10,7 +10,8 @@ members = [
 	"oxide-auth-rocket",
 	"oxide-auth-rouille",
 	"oxide-auth-db",
-	"oxide-auth-db/examples/db-example",
+	"oxide-auth-db/examples/redis-example",
+	"oxide-auth-db/examples/spin-kv-example",
 	"oxide-auth-spin",
 	"oxide-auth-spin/examples/spin-example"
 ]

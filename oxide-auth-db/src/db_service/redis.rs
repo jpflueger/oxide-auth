@@ -1,4 +1,4 @@
-use crate::primitives::db_registrar::OauthClientDBRepository;
+use crate::primitives::db_registrar::{OauthClientDBRepository, DBRegistrar};
 
 use oxide_auth::primitives::prelude::Scope;
 use oxide_auth::primitives::registrar::{ClientType, EncodedClient, RegisteredUrl, ExactUrl};
@@ -45,6 +45,12 @@ pub struct StringfiedEncodedClient {
 
     /// client_secret, for authentication.
     pub client_secret: Option<String>,
+}
+
+impl Into<DBRegistrar> for RedisDataSource {
+    fn into(self) -> DBRegistrar {
+        DBRegistrar::new(Box::from(self), None)
+    }
 }
 
 impl StringfiedEncodedClient {

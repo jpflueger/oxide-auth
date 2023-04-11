@@ -17,9 +17,10 @@ serde_json = "1.0"
 r2d2_redis = {version = "0.14", optional = true }
 url = "2"
 anyhow = "1.0"
-log = "0.4.8"
-
+spin-sdk = { git = "https://github.com/fermyon/spin", tag = "v1.0.0", optional = true }
+chrono = "0.4.24"
 
 [features]
-default = ["with-redis"]
+default = []
 with-redis = ["r2d2_redis"]
+with-spin-kv = ["spin-sdk"]
